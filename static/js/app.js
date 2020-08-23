@@ -26,21 +26,41 @@ function addTable(selector, tableData){
 addTable('#ufo-table>tbody', tableData);
 
 
-function dateCheck(){
+function dateFilter(){
     //To prevent from reloading the page
     d3.event.preventDefault();
     //Clear previous errors
-    error=d3.select('#input-error')
-    error.html("")
+    error=d3.select('#input-error');
+    error.html("");
+    infobox = d3.select('#info-box');
+    infobox.html("");
+    //Default infoblock visibility to none
+    d3.select("#info-block").style("display", "none");
     try{
 
-        var entered = form.select('#datetime').property("value").split("/");
+        var entered = form.select('#datetime').property("value");
         //Create a date object with year-month-date
         //Assuming all the timevalues are in UTC
-        var mydate = new Date(`${entered[2]}-${entered[0]}-${entered[1]}`);
+        var date_array = entered.split("/")
+        var mydate = new Date(`${date_array[0]}-${date_array[1]}-${date_array[2]}`);
+        console.log(mydate.valueOf())
         //console.log(mydate.toUTCString())
         if (isNaN(mydate.valueOf())){
             error.html("Please enter the date in the correct format :MM/DD/YYYY (Year strictly in 4 digits)");
+            d3.select('#ufo-table>tbody').html("");
+        }
+        else {
+            //Filter table based on date
+            //console.log(mydate.getTime())//Timestamp format
+            var filtered_table = tableData.filter(row=>
+                {date = new Date(row.datetime)
+                return date.getTime()==mydate.getTime()});
+            console.log(filtered_table)
+            addTable('#ufo-table>tbody', filtered_table);
+            if (! filtered_table.length){
+                d3.select("#info-block").style("display", "block");
+                infobox.html(`<p>There is no alien info available on the date ${entered}.</p><p>Try a date between 1/1/2010 and 1/13/2010 !</p>`);
+            }
         }
     }
     catch(err){
@@ -50,4 +70,4 @@ function dateCheck(){
 }
 //get the date
 form = d3.select('#form-date');
-form.on("submit",dateCheck)
+form.on("submit",dateFilter)
