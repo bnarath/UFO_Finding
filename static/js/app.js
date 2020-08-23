@@ -24,3 +24,30 @@ function addTable(selector, tableData){
 }
 
 addTable('#ufo-table>tbody', tableData);
+
+
+function dateCheck(){
+    //To prevent from reloading the page
+    d3.event.preventDefault();
+    //Clear previous errors
+    error=d3.select('#input-error')
+    error.html("")
+    try{
+
+        var entered = form.select('#datetime').property("value").split("/");
+        //Create a date object with year-month-date
+        //Assuming all the timevalues are in UTC
+        var mydate = new Date(`${entered[2]}-${entered[0]}-${entered[1]}`);
+        //console.log(mydate.toUTCString())
+        if (isNaN(mydate.valueOf())){
+            error.html("Please enter the date in the correct format :MM/DD/YYYY (Year strictly in 4 digits)");
+        }
+    }
+    catch(err){
+        error.html("Please enter the date in the correct format :MM/DD/YYYY (Year strictly in 4 digits)");
+    }
+    
+}
+//get the date
+form = d3.select('#form-date');
+form.on("submit",dateCheck)
