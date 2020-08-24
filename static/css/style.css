@@ -227,3 +227,8 @@ select {
 #info-block{
   display: none;
 }
+
+select {
+  background-color: initial;
+  border: 1px solid #ced4da;
+}

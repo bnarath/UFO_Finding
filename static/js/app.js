@@ -70,4 +70,6 @@ function dateFilter(){
 }
 //get the date
 form = d3.select('#form-date');
-form.on("submit",dateFilter)
+button = d3.select('#filter-btn');
+form.on("submit",dateFilter);
+button.on("click",dateFilter);
