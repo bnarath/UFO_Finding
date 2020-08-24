@@ -2,6 +2,8 @@
 
 ## Background
 
+![background](static/images/nasa2.jpg)
+
 WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and `ALIENS-R-REAL` have collected all of the eye-witness reports they could to prove it! This data has to be put online for the world to see and then the matter will finally be put to rest.
 
 In this project, we create table dynamically based upon a [dataset we provide](static/js/data.js) and allow users to filter the table data for specific values, by using JavaScript, HTML, CSS, and D3.js.
