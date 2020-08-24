@@ -68,8 +68,13 @@ function dateFilter(){
     }
     
 }
-//get the date
+//on submit
 form = d3.select('#form-date');
 button = d3.select('#filter-btn');
 form.on("submit",dateFilter);
 button.on("click",dateFilter);
+//reset
+reset = d3.select('#reset-filter-btn');
+reset.on("click", function(){
+    addTable('#ufo-table>tbody', tableData);
+})

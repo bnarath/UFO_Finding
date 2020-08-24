@@ -98,7 +98,7 @@ select {
   padding: 20px;
   margin: 0;
   background: black;
-  background-image: url("../images/nasa.jpg");
+  background-image: url("../images/nasa2.jpg");
   background-attachment: fixed;
   background-position: bottom center;
   background-size: cover;
@@ -231,4 +231,20 @@ select {
 select {
   background-color: initial;
   border: 1px solid #ced4da;
+}
+
+
+.zoom:hover{
+    transform: scale(1.2);  /*(120% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.blinking{
+  animation:blinkingText 1.1s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: white;    }
+  49%{    color: white; }
+  60%{    color: transparent; }
+  99%{    color: transparent;  }
+  100%{   color: white;    }
 }
