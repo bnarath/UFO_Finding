@@ -49,6 +49,6 @@ Automatic Table and Date Search
 
 - - -
 ### Codebase
-* [Javascript]
-  * (static/js/app.js)
-  * (static/js/app_level2.js)
+* Javascript
+  * [Basic Search JS Code](static/js/app.js)
+  * [Advanced Search JS Code](static/js/app_level2.js)
