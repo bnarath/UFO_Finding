@@ -1,7 +1,5 @@
 # JavaScript and DOM Manipulation
 
-## Background
-
 ![background](static/images/nasa2.jpg)
 
 WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and `ALIENS-R-REAL` have collected all of the eye-witness reports they could to prove it! This data has to be put online for the world to see and then the matter will finally be put to rest.
