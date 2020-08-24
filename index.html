@@ -6,9 +6,8 @@
   <title>UFO Finder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/solar/bootstrap.min.css">-->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
@@ -20,11 +19,13 @@
             <img class="nav-ufo" src="static/images/ufo.svg">
           </a>
         </div>
+        <a class="navbar-brand navbar-right blinking" href="UFO-level-2/index.html">Advance Search</a>
       </div>
     </nav>
     <div class="hero text-center">
       <h1>UFO Sightings</h1>
       <p>The Truth is Out There</p>
+      <small>Aliens definitely exist and it's possible they're living among us on Earth but have gone undetected so far. Here, you find the evidence!!!</small>
     </div>
     <div class="container">
       <div class="row margin-top-50">
@@ -33,23 +34,25 @@
             <div class="panel panel-default">
               <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
-                <form>
+                <form id="form-date">
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <input class="form-control" id="datetime" type="text" name="date" placeholder="1/1/2010 To 1/13/2010 in the D/M/Y format">
+                        <small id="input-error" class="text-danger"></small>
                       </li>
                     </ul>
                   </div>
                   <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="reset-filter-btn" type="button" class="btn btn-default">Reset Filter</button>
                 </form>
               </div>
             </div>
           </aside>
         </div>
         <div class="col-md-10">
-          <div id="table-area" class="">
+          <div id="table-area">
             <table id="ufo-table" class="table table-striped">
               <thead>
                 <tr>
@@ -66,10 +69,15 @@
             </table>
           </div>
         </div>
+        <div id="info-block" class="jumbotron jumbotron-fluid">
+          <div class="container text-center">
+            <small id="info-box" class="lead text-info"></small>
+          </div>
+        </div>
       </div>
     </div>
-    <footer class="footer">
-      <span class="bottom">UFO Sightings</span>
+    <footer class="footer text-center">
+      <a class="bottom" href="https://github.com/bnarath"><span>UFO Sightings -  &#169 Bincy Narath</span></a>
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
