@@ -6,30 +6,40 @@ WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and `ALIENS-R-RE
 
 In this project, we create table dynamically based upon a [dataset we provide](static/js/data.js) and allow users to filter the table data for specific values, by using JavaScript, HTML, CSS, and D3.js.
 
-### Automatic Table and Date Search
+## Website is published [here](https://bnarath.github.io/UFO_Finding/)
 
-* Create a basic HTML web page or use the [index.html](StarterCode/index.html) file provided (we recommend building your own custom page!).
+## Features
+Website has 2 pages
 
-* Using the UFO dataset provided in the form of an array of JavaScript objects, write code that appends a table to your web page and then adds new rows of data for each UFO sighting.
+### Basic search
+Automatic Table and Date Search
 
-  * Make sure you have a column for `date/time`, `city`, `state`, `country`, `shape`, and `comment` at the very least.
+* HTML web page [index.html](index.html) with the table and a date search option.
 
-* Use a date form in your HTML document and write JavaScript code that will listen for events and search through the `date/time` column to find rows that match user input.
+* [JS code](static/js/app.js) appends a table to the web page and then adds new rows of data for each UFO sighting.
 
-### Level 2: Multiple Search Categories (Optional)
+  * Table has columns for `date/time`, `city`, `state`, `country`, `shape`, `duration` and  `comment`.
 
-* Complete all of Level 1 criteria.
+* User can input `date/time` and the filtered data that match user input is displayed.
+* If the user date format is not correct, the error is displayed.
+* If there is no data available for the user date input, that is also displayed.
+* Reset button to reset the table.
+* This page is linked to the advanced search page.
 
-* Using multiple `input` tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
+### Multiple Search Categories
+
+* User can select multiple search criteria for the below attributes:
 
   1. `date/time`
   2. `city`
   3. `state`
   4. `country`
   5. `shape`
-
+* Reset button to reset the table.
+* If there is no data available for the user selected options, that is displayed as a notification.
+* This page is linked to the basic search page.
+* Reset button to reset the table and the search filters.
 - - -
 
 ### Dataset
-
-* [UFO Sightings Data](StarterCode/static/js/data.js)
+* [UFO Sightings Data](static/js/data.js)
