@@ -1,7 +1,9 @@
 # JavaScript and DOM Manipulation
 
+*Aliens definitely exist and it's possible they're living among us on Earth but have gone undetected so far. Here, you find the evidence!!!*
+
 ![background](static/images/nasa2.jpg)
-```Aliens definitely exist and it's possible they're living among us on Earth but have gone undetected so far. Here, you find the evidence!!!```
+
 
 WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and `ALIENS-R-REAL` have collected all of the eye-witness reports they could to prove it! This data has to be put online for the world to see and then the matter will finally be put to rest.
 
